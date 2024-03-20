@@ -1,0 +1,11 @@
+.navigationBar {
+  z-index: 2;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  color: var(--gray);
+  font-size: 1.1em;
+  font-weight: bold;
+
+}
