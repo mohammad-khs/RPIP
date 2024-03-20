@@ -13,6 +13,9 @@ import UserLoadMore from "./userLoadMore";
 import ErrorImg from "../errorImg";
 
 const UserPage = () => {
+  const handleGoToTop = () => {
+    pictureContext.ref.current.scrollIntoView({ behavior: "smooth" });
+  };
   const location = useLocation();
   const pictureContext = useContext(PictureContext);
   const userQuery = useInfiniteQuery({
@@ -41,7 +44,7 @@ const UserPage = () => {
     <>
       {userQuery.isLoading ? (
         <>
-          <div>
+          <div onLoad={handleGoToTop}>
             <UserStatusSkeleton />
             <PicSkeleton />
           </div>
