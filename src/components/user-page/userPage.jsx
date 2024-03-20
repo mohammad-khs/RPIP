@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import PictureContext from "../../contexts/pictureContext";
 import UserStatus from "./userStatus";
@@ -13,11 +13,15 @@ import UserLoadMore from "./userLoadMore";
 import ErrorImg from "../errorImg";
 
 const UserPage = () => {
+
   const handleGoToTop = () => {
     pictureContext.ref.current.scrollIntoView({ behavior: "smooth" });
   };
   const location = useLocation();
   const pictureContext = useContext(PictureContext);
+  useEffect(() => {
+    handleGoToTop();
+  },[])
   const userQuery = useInfiniteQuery({
     // there is a problem with queryKey
     queryKey: ["user", [location.state.id]],
@@ -44,7 +48,7 @@ const UserPage = () => {
     <>
       {userQuery.isLoading ? (
         <>
-          <div onLoad={handleGoToTop}>
+          <div>
             <UserStatusSkeleton />
             <PicSkeleton />
           </div>
