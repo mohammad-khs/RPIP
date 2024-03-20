@@ -1,5 +1,4 @@
 const UserLoadMore = ({ query }) => {
-
   return (
     <>
       <button
@@ -8,7 +7,7 @@ const UserLoadMore = ({ query }) => {
           query.data.pages.length * 10 >=
           query.data.pages[0].data[0].user.total_photos
         }
-        className="btn btn-outline-dark mt-2 col-12"
+        className="btn btn-outline-dark mt-2 col-12 rounded-0"
       >
         {query.isFetchingNextPage
           ? "loading"

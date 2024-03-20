@@ -6,7 +6,7 @@ const LoadMore = ({ query }) => {
         disabled={
           query.data.pages.length >= query.data.pages[0].data.total_pages
         }
-        className="btn btn-outline-dark mt-2 col-12"
+        className="btn btn-outline-dark mt-2 col-12 rounded-0"
       >
         {query.isFetchingNextPage
           ? "loading"

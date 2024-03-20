@@ -12,7 +12,7 @@ const UserStatus = ({ user }) => {
   return (
     <>
       <div className="container">
-        <div className="d-flex row px-5 py-3">
+        <div className="d-flex row px-5 user-status my-4 py-3">
           <div className="col-md-6 pe-4 col-sm-12 mb-5 ps-0 d-flex justify-content-md-end">
             <img
               src={user.profile_image.large}
