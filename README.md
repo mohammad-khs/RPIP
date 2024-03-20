@@ -1,3 +1,15 @@
+RPIP stands for React Project Infinite Picture 
+Which is a project that i have built with the help of Unsplash api and tanstack-React-Query  
+it basically is a gallery like Pinterest or Unsplash  
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
