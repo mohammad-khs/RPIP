@@ -33,9 +33,10 @@ const ImgButtons = ({ result }) => {
           </Link>
         </button>
         <button onClick={handleLike} className="img-btn like-btn btn btn-light">
-          <Link style={{ color: likeColor }}>
+          {/* it should get alternated to Link tag  */}
+          <div style={{ color: likeColor }}>
             <FontAwesomeIcon icon={faHeart} />
-          </Link>
+          </div>
         </button>
       </div>
     </>
