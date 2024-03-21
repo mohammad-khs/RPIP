@@ -3,14 +3,13 @@ import { useRef, useState } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import PictureContext from "./contexts/pictureContext";
 import "./styles/app.css";
-import Navbar from "./components/navbar";
 import { Route, Routes } from "react-router-dom";
 import UserPage from "./components/user-page/userPage";
 import NotFound from "./components/notFound";
 import RandomPicture from "./components/random_picture/randomPicture";
 import SearchPictures from "./components/search_picture/pictures";
 import Home from "./components/home-page/home";
-
+import NavigationBar from "./components/navbar";
 
 function App() {
   const [item, setItem] = useState("");
@@ -50,7 +49,7 @@ function App() {
           ref,
         }}
       >
-        <Navbar />
+        <NavigationBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="randomPicture">

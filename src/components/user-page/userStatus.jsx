@@ -12,7 +12,7 @@ const UserStatus = ({ user }) => {
   return (
     <>
       <div className="container">
-        <div className="d-flex row px-5 user-status my-4 py-3">
+        <div className="d-flex row px-5 user-status my-4 py-3 m-1">
           <div className="col-md-6 pe-4 col-sm-12 mb-5 ps-0 d-flex justify-content-md-end">
             <img
               src={user.profile_image.large}
@@ -20,15 +20,16 @@ const UserStatus = ({ user }) => {
               alt=""
             />
           </div>
+
           <div
             className="col-sm-12 ps-4 col-md-6 d-flex"
             style={{ flexDirection: "column" }}
           >
             <div className="row gap-md-3 align-items-center">
-              <div className="name col-lg-5 h1">
+              <div className="name col-lg-6 h2">
                 {user.first_name} {user.last_name}
               </div>
-              <div className="col-lg-6 col-12 mb-2">
+              <div className="col-lg-5 col-12 mb-2">
                 <button className="btn btn-outline-secondary bg-primary mx-1">
                   <Link className="text-decoration-none text-light ">Hire</Link>
                 </button>

@@ -1,5 +1,5 @@
 .navigationBar {
-  z-index: 2;
+  z-index: 20;
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -7,5 +7,20 @@
   color: var(--gray);
   font-size: 1.1em;
   font-weight: bold;
+}
 
+ul {
+  list-style: none;
+}
+
+.side-bar {
+  transition: 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+
+.side-close {
+  left: -350px;
 }
