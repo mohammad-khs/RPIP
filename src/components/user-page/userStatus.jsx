@@ -1,18 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import "../../styles/userStatues.css";
+import "../../styles/userStatus.css";
 import {
   faCheck,
-  faEllipsis,
   faEnvelope,
-  faFontAwesomeLogoFull,
   faLocationPin,
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import PictureContext from "../../contexts/pictureContext";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 const UserStatus = ({ user }) => {
-  const pictureContext = useContext(PictureContext);
-  console.log(user);
+  // const pictureContext = useContext(PictureContext);
+
   return (
     <>
       <div className="container">
@@ -36,7 +35,7 @@ const UserStatus = ({ user }) => {
               <div className="col-lg-6 col-12 mb-2">
                 <button
                   disabled={user.portfolio_url !== null ? false : true}
-                  className="btn btn-outline-secondary bg-primary mx-1"
+                  className="btn bg-primary mx-1"
                 >
                   <Link
                     target="_blank"
@@ -46,17 +45,17 @@ const UserStatus = ({ user }) => {
                     Portfolio
                   </Link>
                 </button>
-                <button className="btn btn-outline-secondary mx-1">
+                <button className="btn btn-dark mx-1">
                   {/* it should get alternated to Link tag  */}
-                  <div className="text-decoration-none text-dark">
-                    <FontAwesomeIcon icon={faEnvelope} />
+                  <div className="text-decoration-none">
+                    <FontAwesomeIcon className="" icon={faEnvelope} />
                   </div>
                 </button>
               </div>
             </div>
             <div className="d-flex flex-column gap-3">
               <div className="gap3">bio : {user.bio}</div>
-              <div className="text-secondary ">
+              <div className="">
                 {user.for_hire == true ? (
                   <div className="text-decoration-none mb-2">
                     <FontAwesomeIcon
@@ -75,11 +74,14 @@ const UserStatus = ({ user }) => {
                   className="btn user-status-btn p-0 border-0 d-block mb-2"
                 >
                   <Link
-                    className="text-decoration-none link-secondary"
+                    className="text-decoration-none user-status-links"
                     target="_blank"
                     to={`https://www.google.com/search?q=${user.location}`}
                   >
-                    <FontAwesomeIcon icon={faLocationPin} />{" "}
+                    <FontAwesomeIcon
+                      className="text-danger"
+                      icon={faLocationPin}
+                    />{" "}
                     {user.location ? user.location : "no location"}
                   </Link>
                 </button>
@@ -88,11 +90,11 @@ const UserStatus = ({ user }) => {
                   className="btn user-status-btn border-0 p-0 d-block mb-2"
                 >
                   <Link
-                    target="_blank"
+                    className="text-decoration-none user-status-links"
                     to={`https://www.instagram.com/${user.instagram_username}/`}
-                    className="text-decoration-none link-secondary"
+                    target="_blank"
                   >
-                    <FontAwesomeIcon icon={faFontAwesomeLogoFull} /> instagram
+                    <FontAwesomeIcon icon={faInstagram} /> instagram
                   </Link>
                 </button>
               </div>

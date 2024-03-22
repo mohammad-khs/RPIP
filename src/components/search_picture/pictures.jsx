@@ -22,7 +22,7 @@ const SearchPictures = () => {
     return (
       <>
         <SearchBar />
-        <h2 className="mt-3 text-center">search something</h2>
+        <h2 className="mt-3 text-center text-white">search something</h2>
       </>
     );
   }

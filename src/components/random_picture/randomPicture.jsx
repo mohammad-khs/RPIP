@@ -24,11 +24,9 @@ const RandomPicture = () => {
     retry: 3,
   });
 
-
-
   if (randomQuery.isLoading) {
     return (
-      <div>
+      <div className="mt-3">
         <PicSkeleton />
       </div>
     );
@@ -36,7 +34,7 @@ const RandomPicture = () => {
 
   if (randomQuery.isError) {
     return (
-      <div>
+      <div className="mt-3">
         <h2 className="text-center">{randomQuery.error.message}</h2>
         <ErrorImg />
       </div>
@@ -44,7 +42,7 @@ const RandomPicture = () => {
   }
   return (
     <>
-      <div className="gallery container-md p-0">
+      <div className="gallery container-md p-0 mt-3">
         {randomQuery.data.pages.map((page) => {
           return page.data.map((pic) => {
             return <PicturesLayOut key={pic.id} result={pic} />;

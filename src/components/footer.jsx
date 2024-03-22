@@ -1,82 +1,54 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Link } from "react-router-dom";
+import {
+  faGithub,
+  faLinkedin,
+  faTelegram,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-body-tertiary text-center">
-        {/* <!-- Grid container --> */}
+      <footer className="text-center">
         <div className="container p-4 pb-0">
-          {/* <!-- Section: Social media --> */}
           <section className="mb-4">
-            {/* <!-- Facebook --> */}
             <Link
               data-mdb-ripple-init
-              className="btn text-white btn-floating m-1"
-              
+              className="btn btn-floating text-white m-1"
               role="button"
             >
-              <i className="fab fa-facebook-f"></i>
+              <FontAwesomeIcon className="h2" icon={faLinkedin} />
             </Link>
 
-            {/* <!-- Twitter --> */}
             <Link
               data-mdb-ripple-init
-              className="btn text-white btn-floating m-1"
-              
+              className="btn btn-floating text-white m-1"
               role="button"
             >
-              <i className="fab fa-twitter"></i>
+              <FontAwesomeIcon className="h2" icon={faGithub} />
             </Link>
 
-            {/* <!-- Google --> */}
             <Link
               data-mdb-ripple-init
-              className="btn text-white btn-floating m-1"
-              
+              className="btn btn-floating text-white m-1"
               role="button"
             >
-              <i className="fab fa-google"></i>
+              <FontAwesomeIcon className="h2" icon={faWhatsapp} />
             </Link>
-
-            {/* <!-- Instagram --> */}
             <Link
               data-mdb-ripple-init
-              className="btn text-white btn-floating m-1"
-              
+              className="btn btn-floating text-white m-1"
               role="button"
             >
-              <i className="fab fa-instagram"></i>
-            </Link>
-
-            {/* <!-- Linkedin --> */}
-            <Link
-              data-mdb-ripple-init
-              className="btn text-white btn-floating m-1"
-              
-              role="button"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </Link>
-            {/* <!-- Github --> */}
-            <Link
-              data-mdb-ripple-init
-              className="btn text-white btn-floating m-1"
-              role="button"
-            >
-              <i className="fab fa-github"></i>
+              <FontAwesomeIcon className="h2" icon={faTelegram} />
             </Link>
           </section>
-          {/* <!-- Section: Social media --> */}
         </div>
-        {/* <!-- Grid container --> */}
 
-        {/* <!-- Copyright --> */}
-        <div
-          className="text-center p-3"
-
-        >
-          © 2024 Copyright:
+        <div className="text-center text-white p-3">
+          Copyright © 2024 Mohammad Khosravani. All rights reserved.
         </div>
-        {/* <!-- Copyright --> */}
       </footer>
     </>
   );

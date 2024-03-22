@@ -10,6 +10,7 @@ import RandomPicture from "./components/random_picture/randomPicture";
 import SearchPictures from "./components/search_picture/pictures";
 import Home from "./components/home-page/home";
 import NavigationBar from "./components/navbar";
+import AboutUs from "./components/about-us/aboutUs";
 
 function App() {
   const [item, setItem] = useState("");
@@ -60,6 +61,7 @@ function App() {
             <Route index element={<SearchPictures />} />
             <Route path=":userId" element={<UserPage />} />
           </Route>
+          <Route path="aboutUs" element={<AboutUs/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PictureContext.Provider>

@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import PictureContext from "../../contexts/pictureContext";
 
 const SearchBar = () => {
@@ -14,8 +14,8 @@ const SearchBar = () => {
           onChange={(e) => pictureContext.setItem(e.target.value)}
           autoFocus
           autoCorrect="true"
-          name="search bar"
-          className="m-2 btn btn-outline-dark"
+          name="search-bar"
+          className="m-2 btn btn-dark"
           onKeyDown={(e) =>
             e.key === "Enter"
               ? [

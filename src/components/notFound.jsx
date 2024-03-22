@@ -10,7 +10,11 @@ const NotFound = () => {
     }, 3000);
   });
 
-  return <>404 not found</>;
+  return (
+    <>
+      <div className="text-white h1 m-3">404 not found</div>
+    </>
+  );
 };
 
 export default NotFound;

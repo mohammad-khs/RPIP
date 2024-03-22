@@ -3,12 +3,19 @@
   height: 180px;
 }
 
+.user-status-links {
+  color: #d7d7d7;
+  transition: 0.1s;
+}
+.user-status-links:hover {
+  color: #ffffff;
+}
 .user-status {
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  color: var(--gray);
+  color: white;
 }
 
 .user-status-btn {

@@ -1,0 +1,32 @@
+.slide-bar-img {
+  background-image: url("../imgs/glass-disp.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px !important;
+}
+@font-face {
+  font-family: Saira;
+  src: url(../fonts/SairaStencilOne-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.lets-start-btn {
+  z-index: 20;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(40px);
+  color: var(--gray);
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+}
+
+.lets-start-btn:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
+}
+
+.saira-stencil {
+  font-family: Saira;
+}

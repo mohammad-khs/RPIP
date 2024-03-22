@@ -7,6 +7,7 @@
   color: var(--gray);
   font-size: 1.1em;
   font-weight: bold;
+  color: white;
 }
 
 ul {
@@ -19,7 +20,6 @@ ul {
   left: 0;
   top: 0;
 }
-
 
 .side-close {
   left: -350px;
