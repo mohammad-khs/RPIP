@@ -34,7 +34,7 @@ const RandomPicture = () => {
 
   if (randomQuery.isError) {
     return (
-      <div className="mt-3">
+      <div className="mt-3 text-white">
         <h2 className="text-center">{randomQuery.error.message}</h2>
         <ErrorImg />
       </div>

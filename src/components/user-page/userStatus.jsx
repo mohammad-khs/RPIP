@@ -19,7 +19,7 @@ const UserStatus = ({ user }) => {
           <div className="col-md-6 pe-4 col-sm-12 mb-5 ps-0 d-flex justify-content-md-end">
             <img
               src={user.profile_image.large}
-              className="rounded-circle my-3 user-profile border"
+              className="rounded-circle my-3 user-profile shadow-sm"
               alt=""
             />
           </div>

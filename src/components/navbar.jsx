@@ -52,18 +52,24 @@ const Navbar = () => {
         </div>
         <button
           onClick={(e) => setIsOpen(!isOpen)}
-          className="btn ms-auto me-3 d-lg-none"
+          className="btn ms-auto me-3 my-2 d-lg-none"
         >
-          <FontAwesomeIcon className="h2 m-0 text-white" icon={faBars} />
+          <FontAwesomeIcon className="h1 m-0 text-white" icon={faBars} />
         </button>
       </nav>
       <div
         ref={sideBarRef}
         className={`navigationBar h-100 side-bar ${isOpen ? "" : "side-close"}`}
       >
-        <div className="h1 text-center mt-4">
-          <Logo />
+        <div className="mt-4">
+          <Link
+            className="h1 text-center text-decoration-none text-white "
+            to={"/"}
+          >
+            <Logo />
+          </Link>
         </div>
+
         <button
           onClick={(e) => setIsOpen(!isOpen)}
           className="btn d-flex m-2 ms-auto"

@@ -44,7 +44,7 @@ const SearchPictures = () => {
     return (
       <>
         <SearchBar />
-        <h2 className="text-center">
+        <h2 className="text-center text-white">
           {pictureContext.pictureQuerys.error.message}
         </h2>
         <ErrorImg />
@@ -56,7 +56,7 @@ const SearchPictures = () => {
     return (
       <>
         <SearchBar />
-        <div className="mt-5 text-center">
+        <div className="mt-5 text-center text-white">
           <h2>SORRY</h2>
           <h2>NO ITEM FOUND</h2>
         </div>

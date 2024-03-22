@@ -18,7 +18,7 @@ const UserInfo = ({ result }) => {
         </Link>
         <div className="user-name mx-2">
           <Link
-            className="text-decoration-none user-id "
+            className="text-decoration-none user-id text-white"
             to={handleState()}
             state={result.user}
           >
