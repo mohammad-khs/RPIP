@@ -10,7 +10,10 @@ const HomePageHeader = () => {
           <div className="mb-4">gallery</div>
           <button className="rounded-5 lets-start-btn btn btn-lg">
             <div className="h1 m-0">
-              <Link className="text-decoration-none text-white" to={"/search"}>
+              <Link
+                className="text-decoration-none text-white"
+                to={"/RPIP/search"}
+              >
                 lets start
               </Link>
             </div>

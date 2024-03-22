@@ -15,7 +15,7 @@ const UserStatus = ({ user }) => {
   return (
     <>
       <div className="container">
-        <div className="d-flex row px-5 user-status my-4 py-3 m-1">
+        <div className="d-flex row px-5 user-status my-4 py-3 rounded-3 m-1">
           <div className="col-md-6 pe-4 col-sm-12 mb-5 ps-0 d-flex justify-content-md-end">
             <img
               src={user.profile_image.large}
@@ -45,7 +45,7 @@ const UserStatus = ({ user }) => {
                     Portfolio
                   </Link>
                 </button>
-                <button className="btn btn-dark mx-1">
+                <button className="btn btn-warning text-white mx-1">
                   {/* it should get alternated to Link tag  */}
                   <div className="text-decoration-none">
                     <FontAwesomeIcon className="" icon={faEnvelope} />
