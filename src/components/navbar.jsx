@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="mt-4">
           <Link
             className="h1 text-center text-decoration-none text-white "
-            to={"/"}
+            to={"/RPIP/"}
           >
             <Logo />
           </Link>
