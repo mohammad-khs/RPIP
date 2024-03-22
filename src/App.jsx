@@ -52,16 +52,16 @@ function App() {
       >
         <NavigationBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="randomPicture">
+          <Route path="/RPIP/" element={<Home />} />
+          <Route path="/RPIP/randomPicture">
             <Route index element={<RandomPicture />} />
             <Route path=":userId" element={<UserPage />} />
           </Route>
-          <Route path="search">
+          <Route path="/RPIP/search">
             <Route index element={<SearchPictures />} />
             <Route path=":userId" element={<UserPage />} />
           </Route>
-          <Route path="aboutUs" element={<AboutUs/>} />
+          <Route path="/RPIP/aboutUs" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PictureContext.Provider>
