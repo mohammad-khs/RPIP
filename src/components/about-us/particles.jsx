@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { ColorRing, MutatingDots, Rings } from "react-loader-spinner";
 
 const WhiteParticles = () => {
   const [init, setInit] = useState(false);
@@ -95,7 +96,13 @@ const WhiteParticles = () => {
     );
   }
 
-  return <></>;
+  return (
+    <>
+      <div className="particles-loading position-absolute top-0 start-0 d-flex justify-content-center align-items-center">
+        <Rings width={300} height={300} color="#8e7342" />
+      </div>
+    </>
+  );
 };
 
 export default WhiteParticles;

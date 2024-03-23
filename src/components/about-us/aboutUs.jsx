@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import WhiteParticles from "./particles";
-
+import "../../styles/aboutUs.css";
 const AboutUs = () => {
   return (
     <>
@@ -22,10 +22,20 @@ const AboutUs = () => {
           </div>
           <div className="d-flex justify-content-center gap-5 mt-3">
             <button className="btn btn-success rounded-0">
-              <Link to={"https://github.com/mohammad-khs/RPIP"} className="text-white text-decoration-none">Project</Link>
+              <Link
+                to={"https://github.com/mohammad-khs/RPIP"}
+                className="text-white text-decoration-none"
+              >
+                Project
+              </Link>
             </button>
             <button className="btn btn-secondary rounded-0">
-              <Link to={"https://github.com/mohammad-khs"} className="text-white text-decoration-none">Github</Link>
+              <Link
+                to={"https://github.com/mohammad-khs"}
+                className="text-white text-decoration-none"
+              >
+                Github
+              </Link>
             </button>
           </div>
         </div>
