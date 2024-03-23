@@ -50,7 +50,7 @@ const UserStatus = ({ user }) => {
                   disabled={user.social.paypal_email !== null ? false : true}
                 >
                   <Link
-                    to={`${user.social.paypal_email}`}
+                    to={`https://www.paypal.com/${user.social.paypal_email}`}
                     className="text-decoration-none text-light"
                   >
                     <FontAwesomeIcon className="" icon={faPaypal} />
