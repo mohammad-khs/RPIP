@@ -9,7 +9,7 @@ const UserInfo = ({ result }) => {
   return (
     <>
       <div className="img-btn d-flex align-content-md-center m-2 my-md-0 justify-content-start user-info">
-        <Link className="" to={result.user.id} state={result.user}>
+        <Link className="" to={handleState()} state={result.user}>
           <img
             className="rounded-circle"
             src={result.user.profile_image.small}

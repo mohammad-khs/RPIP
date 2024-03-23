@@ -14,7 +14,7 @@ const WhiteParticles = () => {
   }, []);
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    return null;
   };
 
   const options = useMemo(

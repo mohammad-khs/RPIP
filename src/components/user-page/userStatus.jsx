@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "../../styles/userStatus.css";
-import {
-  faCheck,
-  faEnvelope,
-  faLocationPin,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faLocationPin } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import PictureContext from "../../contexts/pictureContext";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faPaypal,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 const UserStatus = ({ user }) => {
   // const pictureContext = useContext(PictureContext);
-
+  console.log(user);
   return (
     <>
       <div className="container">
@@ -35,21 +35,26 @@ const UserStatus = ({ user }) => {
               <div className="col-lg-6 col-12 mb-2">
                 <button
                   disabled={user.portfolio_url !== null ? false : true}
-                  className="btn bg-primary mx-1"
+                  className="btn bg-warning mx-1"
                 >
                   <Link
                     target="_blank"
                     to={`${user.portfolio_url}`}
-                    className="text-decoration-none text-light "
+                    className="text-decoration-none text-light"
                   >
                     Portfolio
                   </Link>
                 </button>
-                <button className="btn btn-warning text-white mx-1">
-                  {/* it should get alternated to Link tag  */}
-                  <div className="text-decoration-none">
-                    <FontAwesomeIcon className="" icon={faEnvelope} />
-                  </div>
+                <button
+                  className="btn btn-primary mx-1"
+                  disabled={user.social.paypal_email !== null ? false : true}
+                >
+                  <Link
+                    to={`${user.social.paypal_email}`}
+                    className="text-decoration-none text-light"
+                  >
+                    <FontAwesomeIcon className="" icon={faPaypal} />
+                  </Link>
                 </button>
               </div>
             </div>
@@ -95,6 +100,18 @@ const UserStatus = ({ user }) => {
                     target="_blank"
                   >
                     <FontAwesomeIcon icon={faInstagram} /> instagram
+                  </Link>
+                </button>
+                <button
+                  disabled={user.twitter_username !== null ? false : true}
+                  className="btn user-status-btn border-0 p-0 d-block mb-2"
+                >
+                  <Link
+                    className="text-decoration-none user-status-links"
+                    to={`https://www.twitter.com/${user.twitter_username}/`}
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faTwitter} /> twitter
                   </Link>
                 </button>
               </div>

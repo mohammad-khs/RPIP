@@ -29,7 +29,10 @@ const Navbar = () => {
         <div className="collapse navbar-collapse align-items-center">
           <ul className="d-flex m-0 align-items-center w-100 justify-content-center">
             <li className="nav-item ms-3 me-auto">
-              <Link className="h1 text-decoration-none text-white " to={"/RPIP/"}>
+              <Link
+                className="h1 text-decoration-none text-white "
+                to={"/RPIP/"}
+              >
                 <Logo />
               </Link>
             </li>
@@ -39,12 +42,18 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link text-white p-3" to={"/RPIP/randomPicture"}>
+              <Link
+                className="nav-link text-white p-3"
+                to={"/RPIP/randomPicture"}
+              >
                 EXPLORE
               </Link>
-            </li>{" "}
+            </li>
             <li className="nav-item ">
-              <Link className="nav-link text-white p-3 pe-5" to={"/RPIP/aboutUs"}>
+              <Link
+                className="nav-link text-white p-3 pe-5"
+                to={"/RPIP/aboutUs"}
+              >
                 ABOUT US
               </Link>
             </li>
@@ -90,6 +99,11 @@ const Navbar = () => {
           <li className="nav-item mb-3 me-5">
             <Link className="nav-link" to={"/RPIP/randomPicture"}>
               EXPLORE
+            </Link>
+          </li>
+          <li className="nav-item mb-3 me-5">
+            <Link className="nav-link" to={"/RPIP/aboutUs"}>
+              ABOUT US
             </Link>
           </li>
         </ul>

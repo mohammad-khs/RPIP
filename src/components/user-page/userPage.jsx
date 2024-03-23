@@ -13,7 +13,6 @@ import UserLoadMore from "./userLoadMore";
 import ErrorImg from "../errorImg";
 
 const UserPage = () => {
-
   const handleGoToTop = () => {
     pictureContext.ref.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -21,7 +20,7 @@ const UserPage = () => {
   const pictureContext = useContext(PictureContext);
   useEffect(() => {
     handleGoToTop();
-  },[])
+  }, []);
   const userQuery = useInfiniteQuery({
     // there is a problem with queryKey
     queryKey: ["user", [location.state.id]],
