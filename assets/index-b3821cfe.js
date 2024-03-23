@@ -1,1 +1,0 @@
-import{_ as r}from"./index-63f6a66b.js";async function o(t,a=!0){await t.addParticleUpdater("size",async()=>{const{SizeUpdater:e}=await r(()=>import("./SizeUpdater-93abd865.js"),["assets/SizeUpdater-93abd865.js","assets/index-63f6a66b.js","assets/index-8cc1fa62.css"]);return new e},a)}export{o as loadSizeUpdater};
